@@ -9,7 +9,7 @@ import sqlite3
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 
-writer = csv.writer(open('newses.csv', 'w'))
+writer = csv.writer(open('input.csv', 'w'))
 writer.writerow(['URL', "Date", 'Headline', 'Content', 'Portal'])
 
 options = Options()
@@ -24,6 +24,8 @@ page = 1
 
 while True:
     driver.get('https://www.thedailystar.net/tags/road-accident?page='+str(page))
+
+    # driver.find_element_by_class_name
 
     links = driver.find_element_by_class_name('view-content').find_elements_by_css_selector('h3>a')
 
