@@ -1,3 +1,4 @@
 .ipynb_*
 scikit*
 .DS_Store
+*.csv
